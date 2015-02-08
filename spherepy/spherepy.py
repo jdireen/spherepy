@@ -18,18 +18,18 @@
 # along with SpherePy.  If not, see <http://www.gnu.org/licenses/>
 
 """
-@newField description: Description
-@newField revisions: Revisions
-@newField departments: Departments
-@newField applications: Applications
+:newField description: Description
+:newField revisions: Revisions
+:newField departments: Departments
+:newField applications: Applications
 
-@author:
+:author:
     rdireen
 
-@organization:
+:organization:
     DireenTech Inc.
 
-@description:
+:description:
 
 """
 
@@ -62,7 +62,23 @@ class SpherePyError(Exception):
 class ScalarCoefs(object):
     """Holds the scalar coefficients that represent a spherical pattern the 
     function spht returns this object"""
+    
     def __init__(self, vec, nmax, mmax):
+        '''
+        Instantiates a Scalar Coefficient with given values.
+        
+        :parameters:
+            vec : numpy.array
+                A given numpy array to coefficizes.
+            nmax : int
+                maximum n
+            mmax : int
+                maximum m
+        
+        :notes: this doesn't have to be here, want to see how sphinx handles \
+                it...
+        
+        '''
 
         self._vec = vec
         self._nmax = nmax
